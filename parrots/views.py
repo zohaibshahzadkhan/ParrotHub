@@ -1,7 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Parrot
 
-# Create your views here.
 
 def parrot_list(request):
   parrots = Parrot.objects.filter(status=1)

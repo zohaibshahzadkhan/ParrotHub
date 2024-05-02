@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'cloudinary',
     'parrots',
+    'events',
     'bootstrap5',
 ]
 

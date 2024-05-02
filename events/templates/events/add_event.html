@@ -1,0 +1,56 @@
+<!-- add_event.html -->
+{% extends 'base.html' %}
+
+{% block head_title %}Add Event{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1 class="my-4">Add Event</h1>
+  <form method="post" action="{% url 'add_event' %}" class="needs-validation">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="id_title" class="form-label">Title</label>
+      <input type="text" class="form-control" id="id_title" name="title" required>
+      <div class="invalid-feedback">
+        Please provide a title.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="id_description" class="form-label">Description</label>
+      <textarea class="form-control" id="id_description" name="description" required></textarea>
+      <div class="invalid-feedback">
+        Please provide a description.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="id_date" class="form-label">Date</label>
+      <input type="date" class="form-control" id="id_date" name="date" required>
+      <div class="invalid-feedback">
+        Please provide a valid date.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="id_time" class="form-label">Time</label>
+      <input type="time" class="form-control" id="id_time" name="time" required>
+      <div class="invalid-feedback">
+        Please provide a valid time.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="id_location" class="form-label">Location</label>
+      <input type="text" class="form-control" id="id_location" name="location" required>
+      <div class="invalid-feedback">
+        Please provide a location.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="id_status" class="form-label">Status</label><br>
+      <input type="radio" id="id_draft" name="status" value="0" checked>
+      <label for="id_draft">Draft</label><br>
+      <input type="radio" id="id_published" name="status" value="1">
+      <label for="id_published">Published</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% endblock %}

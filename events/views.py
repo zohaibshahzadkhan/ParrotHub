@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect,get_object_or_404
 from django.contrib.admin.views.decorators import staff_member_required
 from .models import Event
 from .forms import EventForm
@@ -31,3 +31,10 @@ def add_event(request):
             'event_form': event_form
         }
       )
+
+@staff_member_required
+def delete_event(request,event_id):
+     event = get_object_or_404(Event, id=event_id)
+     if request.method == 'POST':
+        event.delete()
+        return redirect('events')

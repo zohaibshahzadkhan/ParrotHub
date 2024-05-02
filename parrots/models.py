@@ -10,6 +10,9 @@ class ParrotCategory(models.Model):
   """
   name = models.CharField(max_length=200, unique=True)
 
+  def __str__(self):
+    return f"{self.name}"
+
 
 class Parrot(models.Model):
   """
@@ -22,3 +25,6 @@ class Parrot(models.Model):
   about = models.TextField()
   category = models.ForeignKey(ParrotCategory, on_delete=models.CASCADE, related_name="parrot_category")
   status = models.IntegerField(choices=STATUS, default=0)
+
+  def __str__(self):
+    return f"{self.name}"

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <div class="card">
+      <img src="{{ parrot.image.url }}" class="card-img-top" alt="{{ parrot.name }}">
+      <div class="card-body">
+        <h5 class="card-title">{{ parrot.name }}</h5>
+        <p class="card-text">{{ parrot.about }}</p>
+        <p class="card-text">Category: {{ parrot.category }}</p>
+        <p class="card-text">Characteristics: {{ parrot.characteristics }}</p>
+        <a href="{% url 'home' %}" class="btn btn-primary">Back to Home</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -10,7 +10,7 @@
       <div class="card-body d-flex flex-column">
         <h5 class="card-title">{{ parrot.name }}</h5>
         <p class="card-text flex-grow-1 overflow-hidden">{{ parrot.characteristics }}</p>
-        <a href="#" class="btn btn-primary mt-auto">Learn More</a>
+        <a href="{% url 'parrot_detail' parrot.slug %}" class="btn btn-primary mt-auto">Learn More</a>
       </div>
     </div>
   </div>

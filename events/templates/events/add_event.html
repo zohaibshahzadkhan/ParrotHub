@@ -6,7 +6,7 @@
 {% block content %}
 <div class="container">
   <h1 class="my-4">Add Event</h1>
-  <form method="post" action="{% url 'add_event' %}" class="needs-validation">
+  <form method="post" action="{% url 'add_event' %}" class="needs-validation" novalidate>
     {% csrf_token %}
     <div class="mb-3">
       <label for="id_title" class="form-label">Title</label>

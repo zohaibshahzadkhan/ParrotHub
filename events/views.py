@@ -38,3 +38,13 @@ def delete_event(request,event_id):
      if request.method == 'POST':
         event.delete()
         return redirect('events')
+
+@staff_member_required
+def update_event(request, event_id):
+    event = get_object_or_404(Event, id=event_id)
+    if request.method == 'POST':
+        event_form = EventForm(data=request.POST, instance=event)
+
+        if event_form.is_valid():
+            event_form.save()
+            return redirect('events')

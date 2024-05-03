@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.shortcuts import render, redirect,get_object_or_404
 from django.contrib.admin.views.decorators import staff_member_required
 from .models import Event
@@ -21,6 +22,7 @@ def add_event(request):
         event_form = EventForm(request.POST)
         if event_form.is_valid():
             event_form.save()
+            messages.add_message(request, messages.SUCCESS, "Event has been added successfully!")
             return redirect('events')  
     else:
         event_form = EventForm()
@@ -37,6 +39,7 @@ def delete_event(request,event_id):
      event = get_object_or_404(Event, id=event_id)
      if request.method == 'POST':
         event.delete()
+        messages.add_message(request, messages.SUCCESS, 'Event deleted!')
         return redirect('events')
 
 @staff_member_required
@@ -47,4 +50,5 @@ def update_event(request, event_id):
 
         if event_form.is_valid():
             event_form.save()
+            messages.add_message(request, messages.SUCCESS, 'Event Updated!')
             return redirect('events')

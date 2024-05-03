@@ -13,7 +13,7 @@
       <div class="card">
         <div class="card-body">
           <h3 class="card-title">{% trans "Sign In" %}</h3>
-          <p class="card-text">{% blocktrans %}Welcome back to the ParrotHub. To leave a comment on Events, please log
+          <p class="card-text">{% blocktrans %}Welcome back to the ParrotHub. To see Events, please log
             in. If you have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
             first.{% endblocktrans %}</p>
           <form class="login" method="POST" action="{% url 'account_login' %}">

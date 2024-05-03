@@ -3,9 +3,11 @@
 {% url 'add_event' as add_event_url %}
 {% url 'update_event' as update_event_url %}
 {% url 'delete_event' as delete_event_url %}
+{% url 'account_login' as login_url %}
 {% load static %}
 
 {% block content %}
+{% if user.is_authenticated %}
 <div class="container">
   <h1 class="my-4">Events</h1>
   <div class="d-flex justify-content-end mb-3">
@@ -26,7 +28,7 @@
               <p class="card-text">Time: {{ event.time }}</p>
               <p class="card-text">Location: {{ event.location }}</p>
             </div>
-            {% if user.is_authenticated and user.is_staff %}
+            {% if user.is_staff %}
             <!-- Delete Button -->
             <form method="post" action="{% url 'delete_event' event.id %}" id="delete-form-{{ event.id }}">
               {% csrf_token %}
@@ -115,4 +117,11 @@
     {% endfor %}
   </div>
 </div>
+{% else %}
+<div class="container">
+  <div class="alert alert-warning" role="alert">
+    Please <a href="{% url 'account_login' %}">login</a> to view events.
+  </div>
+</div>
+{% endif %}
 {% endblock %}

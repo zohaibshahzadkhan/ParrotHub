@@ -2,6 +2,7 @@ from django.db import models
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
+
 class Event(models.Model):
     """
     Represents an event entity.
@@ -15,6 +16,7 @@ class Event(models.Model):
         status (int): The status of the event (0 for Draft, 1 for Published).
         created_on (DateTime): The date and time when the event was created.
     """
+
     title = models.CharField(max_length=200)
     description = models.TextField()
     date = models.DateField()

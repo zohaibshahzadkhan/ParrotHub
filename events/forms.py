@@ -1,7 +1,8 @@
 from django import forms
 from .models import Event
 
+
 class EventForm(forms.ModelForm):
     class Meta:
         model = Event
-        fields = ['title', 'description', 'date', 'time', 'location', 'status']
+        fields = ["title", "description", "date", "time", "location", "status"]

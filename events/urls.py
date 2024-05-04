@@ -1,6 +1,6 @@
-from . import views
 from django.urls import path
 from .views import add_event, delete_event, update_event
+from . import views
 
 urlpatterns = [ 
   path("", views.event_list, name="events"),

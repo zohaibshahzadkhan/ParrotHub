@@ -1,22 +1,22 @@
 (function () {
-  'use strict'
+  'use strict';
 
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  var forms = document.querySelectorAll('.needs-validation')
+  const forms = document.querySelectorAll('.needs-validation');
 
   // Loop over them and prevent submission
   Array.prototype.slice.call(forms)
     .forEach(function (form) {
       form.addEventListener('submit', function (event) {
         if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
+          event.preventDefault();
+          event.stopPropagation();
         }
 
-        form.classList.add('was-validated')
-      }, false)
-    })
-})()
+        form.classList.add('was-validated');
+      }, false);
+    });
+})();
 
 /**
  * Adds an event listener to the document to display a welcome message modal when the DOM content is loaded.
@@ -34,9 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
    * @function displayWelcomeMessage
    */
   function displayWelcomeMessage() {
-    var hasSeenWelcomeMessage = document.cookie.includes("parrothub_welcome_shown=true");
+    const hasSeenWelcomeMessage = document.cookie.includes("parrothub_welcome_shown=true");
     if (!hasSeenWelcomeMessage) {
-      var modalWrapper = document.createElement("div");
+      const modalWrapper = document.createElement("div");
       modalWrapper.innerHTML = `
               <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
               </div>
           `;
       document.body.appendChild(modalWrapper);
-      var welcomeModal = new bootstrap.Modal(document.getElementById('welcomeModal'), { backdrop: 'static', keyboard: false });
+      const welcomeModal = new bootstrap.Modal(document.getElementById('welcomeModal'), { backdrop: 'static', keyboard: false });
       welcomeModal.show();
       setTimeout(function () {
         welcomeModal.hide();

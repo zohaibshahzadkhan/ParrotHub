@@ -1,4 +1,4 @@
-# What's ParrotHub!
+# ParrotHub!
 
 ![Logo](readme-media/main.png)
 
@@ -199,8 +199,8 @@ Use CSS grid/flex-box system and restructure layout to move button vertically un
 
 ### Local Deployment
 1. On GitHub.com, navigate to the [zohaibshahzadkhan/ParrotHub](https://github.com/zohaibshahzadkhan/ParrotHub) repository and clone it.
-2. Once you clone the repository you will need to install the libraries, you can do this by typing "pip3 install -r requirements.txt" into the terminal
-3. Open the .env file in the project directory and change the key pair values to match your credentials. There is a [sample env file](/sample_env.py) that you can use to help you
+2. Once you clone the repository you will need to install the libraries, you can do this by typing "pip3 install -r requirements.txt" into the terminal from root directory of the project.
+3. Rename sample_env.py to .env file and change the key pair values to match your credentials. There is a [sample env file](/sample_env.py) that you can use. 
 
 ### Remote Deployment 
 1. Log in to Heroku
@@ -208,15 +208,14 @@ Use CSS grid/flex-box system and restructure layout to move button vertically un
 3. Give your application a unique name, select a region appropriate to your location and click the 'Create app' button.
 4. You can use an external database for example postgre or use 'Heroku Postgres' under the Add-ons section.
 5. Go to settings section and click 'Reveal Config Vars' in the Config vars section.
-6. Add ALLOWED_HOSTS and the value as the name of you project with '.herokuapp.com' appended to the end.
-7. Add CLOUDINARY_URL and the value as your cloudinary API key.
-8.  Add SECRET_KEY and the value as a complex string which will be used to provide cryptographic signing.
-9.  Add DATABASE_URL if you are using a different database than Heroku Postgres.
-10. Navigate to the 'Deploy' page
-11. Select 'GitHub' from the 'Deployment method' section
-12. Enter your github account details and select the forked/ clone repository.
-13. Select 'Manual deploy', select the 'main' branch in the drop down and click the 'Deploy' button.
-14. Once built, click the 'View' button to load the URL.
+6. Add CLOUDINARY_URL and the value as your cloudinary API key.
+7.  Add SECRET_KEY and the value as a complex string which will be used to provide cryptographic signing.
+8.  Add DATABASE_URL if you are using a different database than Heroku Postgres.
+9.  Navigate to the 'Deploy' page
+10. Select 'GitHub' from the 'Deployment method' section
+11. Enter your github account details and select the forked/ clone repository.
+12. Select 'Manual deploy', select the 'main' branch in the drop down and click the 'Deploy' button.
+13. Once built, click the 'View' button to load the URL.
 
 ### Database
 A Postgres database has been used for this project, provided by ElephantSQL.
@@ -235,13 +234,18 @@ A Postgres database has been used for this project, provided by ElephantSQL.
 
 The models were migrated to the database by entering the following commands in the terminal:
 
+```
 python3 manage.py makemigrations
+
 python3 manage.py migrate
 
+```
  The live link can be found here - [Parrothub](https://parrot-hub-ea31d979dcf4.herokuapp.com/)
 
 ### Prerequisite
 - A Cloudinary account will be needed, create one for free at https://cloudinary.com.
+  
+- An Elephantsql account will be needed, create one for free at https://customer.elephantsql.com/login
 
 
 ***
@@ -252,7 +256,7 @@ python3 manage.py migrate
 
 - HTML, CSS and Javascript code help was taken from w3schools - [W3Schools](https://www.w3schools.com/)
 
-- Django Documentation - [Django](https://docs.djangoproject.com/en/4.1/)
+- Django Documentation - [Django](https://docs.djangoproject.com/en/5.0/)
 
 - Bootstrap Documentation - [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 
@@ -262,6 +266,7 @@ python3 manage.py migrate
 
 #### Media
 - Google Image - [google image](https://google.com/)
+- favicon Image - [flaticon](https://www.flaticon.com/free-icon/parrot_8702984?term=parrots&page=1&position=80&origin=search&related_id=8702984)
   
 
 ## Acknowledgements

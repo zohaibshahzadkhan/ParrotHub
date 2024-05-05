@@ -149,19 +149,15 @@ Welcome to the manual testing documentation for ParrotHub. This document outline
 
 ### HTML
 
-#### index
-https://validator.w3.org/nu/?doc=https%3A%2F%2Fparrot-hub-ea31d979dcf4.herokuapp.com%2F
+#### [Home Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fparrot-hub-ea31d979dcf4.herokuapp.com%2F)
 
 <img src="readme-media/validations/home-html-validation.png" alt="home page validation">
 
-#### individual parrot
-
-https://validator.w3.org/nu/?doc=https%3A%2F%2Fparrot-hub-ea31d979dcf4.herokuapp.com%2Ffischers%2F
+#### [Individual Parrot Detail Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fparrot-hub-ea31d979dcf4.herokuapp.com%2Ffischers%2F)
 
 <img src="readme-media/validations/individual-parrot-html-validation.png" alt="individual parrot page validation">
 
-#### Events page
-https://validator.w3.org/nu/?doc=https%3A%2F%2Fparrot-hub-ea31d979dcf4.herokuapp.com%2Fevents%2F
+#### [Events Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fparrot-hub-ea31d979dcf4.herokuapp.com%2Fevents%2F)
 
 <img src="readme-media/validations/events-html.png" alt="individual events page validation">
 
@@ -210,8 +206,7 @@ With the Lighthouse tests there are some best practices issue. This is because o
 ![lighthouse-signup](readme-media/testing/light-house-signup.png)
 
 ## Devices used for manual testing
-Parrothub was tested using the following desktop and mobile browsers:
+Parrothub was tested using Chrome desktop and mobile browsers
 
-### Desktop
-- Chrome
+
 [<< Back to ReadMe](Readme.md)

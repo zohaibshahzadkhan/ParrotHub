@@ -92,5 +92,8 @@ All user stories were entered as issues in a GitHub Kanban project follow the li
 ### Update Event Modal
 <img src="readme-media/wireframes/update_event.png" alt="update event modal">
 
+### Navigation Plan
+![Navigation Plan](readme-media/navigation_plan.png)
+
 
 

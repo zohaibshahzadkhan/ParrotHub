@@ -151,5 +151,17 @@ All user stories were entered as issues in a GitHub Kanban project follow the li
 - Users can add details of their own parrots for record-keeping purposes, allowing them to track and manage information about their feathered friends.
 
 
+# Technologies Used
 
+- HTML5
+- CSS3
+- Python
+- Javascript
+- cloudinary
+- django-allauth
+- django-summernote
+- Bootstrap
+- PostgreSQL
+
+***
 

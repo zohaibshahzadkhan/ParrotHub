@@ -47,6 +47,31 @@ The aims of the ParrotHub website project are as follows:
 
 ### 5. Stay Informed
 - Stay informed about the latest posts and updates by regularly checking the platform for new content and announcements.
+  
+# User Stories & Epics
+All user stories were entered as issues in a GitHub Kanban project follow the link to see the project:
+[Project Link](https://github.com/users/zohaibshahzadkhan/projects/4)
+
+### Epic 1: Displaying Parrots and Individual Parrot Detail Info.
+- [1](https://github.com/zohaibshahzadkhan/ParrotHub/issues/1) - As a parrot enthusiast, I want to discover information about different parrot species, so that I can select the parrot and learn about it's characteristics .
+- [2](https://github.com/zohaibshahzadkhan/ParrotHub/issues/2) - As a user, I want to access detailed information about individual parrots, so that I can learn about specific species and their unique traits
+
+### Epic 2: Authentication.
+- [8](https://github.com/zohaibshahzadkhan/ParrotHub/issues/8) - As a Site User I can register an account so that I can view Events.
+
+### Epic 3: Event Management.
+- [9](https://github.com/zohaibshahzadkhan/ParrotHub/issues/9) - As a general user, I want to view event details, so that I can attend events.
+- [5](https://github.com/zohaibshahzadkhan/ParrotHub/issues/5) - As an admin, I want to post details about upcoming parrot-related events, so that I can inform the community and encourage participation.
+- [7](https://github.com/zohaibshahzadkhan/ParrotHub/issues/7) - As an admin user , I want to delete event details about upcoming parrot-related events, so that I can manage events effectively.
+- [6](https://github.com/zohaibshahzadkhan/ParrotHub/issues/6) - As an admin, I want to update event details about upcoming parrot-related events, so that I can keep the information accurate and up-to-date.
+
+
+
+### Incomplete User Stories for future developement
+- [3](https://github.com/zohaibshahzadkhan/ParrotHub/issues/3) - As a general user, I want to view event details and comment on events, so that I can engage with the community and express interest in attending.
+- [4](https://github.com/zohaibshahzadkhan/ParrotHub/issues/4) - As a Site User I can modify or delete my comment on a Event so that I can be involved in the conversation.
+
+
 
 
 

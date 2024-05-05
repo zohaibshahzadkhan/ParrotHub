@@ -4,6 +4,20 @@ from django.contrib.auth.models import User
 STATUS = ((0, "Draft"), (1, "Published"))
 
 
+def get_default_author():
+    """
+    Retrieves the default author for the Event model.
+
+    This function returns the first user object found in the database,
+    which will be used as the default author for events.
+
+    Returns:
+        User or None: The first user object found in the database,
+        or None if no users exist.
+    """
+    return User.objects.first()
+
+
 class Event(models.Model):
     """
     Represents an event entity.
@@ -27,9 +41,11 @@ class Event(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     created_on = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(
-        User, on_delete=models.CASCADE,
+        User,
+        on_delete=models.CASCADE,
         related_name="event_created_by",
-        default=1, blank=True
+        default=get_default_author,
+        blank=True,
     )
 
     def __str__(self):

@@ -20,13 +20,17 @@ class EventsViewTest(TestCase):
             date=date.today(),
             time=time(hour=12, minute=0),
             status=1,
+            author=self.staff_user,
         )
 
     def test_event_list_view(self):
         response = self.client.get(reverse("events"))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, "events/events.html")
-        self.assertIsInstance(response.context["events"], Event.objects.all().__class__)
+        self.assertIsInstance(
+            response.context["events"],
+            Event.objects.all().__class__
+        )
 
     def test_add_event_view_authenticated(self):
         self.client.login(username="staffuser", password="staffpassword")
@@ -45,7 +49,10 @@ class EventsViewTest(TestCase):
 
     def test_delete_event_view_authenticated(self):
         self.client.login(username="staffuser", password="staffpassword")
-        response = self.client.post(reverse("delete_event", args=[self.event.id]))
+        response = self.client.post(reverse(
+            "delete_event",
+            args=[self.event.id]
+            ))
         self.assertEqual(response.status_code, 302)
         self.assertEqual(Event.objects.count(), 0)
         self.assertRedirects(response, reverse("events"))

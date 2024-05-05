@@ -96,4 +96,60 @@ All user stories were entered as issues in a GitHub Kanban project follow the li
 ![Navigation Plan](readme-media/navigation_plan.png)
 
 
+# Features
+
+### 1. User Authentication
+- Sign up for a new account
+- Log in securely to access your account
+- Display success messages upon successful login or registration
+
+![signin desktop view](readme-media/site_images/authentication/signin_desktop.png)
+![signup desktop view](readme-media/site_images/authentication/signup_desktop.png)
+![signup mobile view](readme-media/site_images/authentication/signup_mobile.png)
+![signin mobile view](readme-media/site_images/authentication/signin_mobile.png)
+
+
+### 2. Parrot Listings
+- Browse list of parrots
+- View main information about parrots
+
+![parrot list desktop view](readme-media/site_images/parrots/home_desktop.png)
+![parrot list mobile view](readme-media/site_images/parrots/home_mobile.png)
+
+
+### 3. Individual Parrot Page
+- Explore dedicated pages for each parrot, showcasing images, and in-depth descriptions
+- Learn about specific species and their unique traits
+
+![individual parrot list desktop view](readme-media/site_images/parrots/individual_parrot_desktop.png)
+![individual parrot list mobile view](readme-media/site_images/parrots/individual_parrot_mobile.png)
+
+
+### 4. Event Management
+- Stay updated on upcoming events for parrot enthusiasts, including meetups, adoption drives, and educational workshops
+
+- Admin users can add, update, and delete events to keep the community informed
+
+![events desktop view](readme-media/site_images/event-managment/event_desktop.png)
+![events mobile view](readme-media/site_images/event-managment/events_mobile.png)
+
+![add event desktop view](readme-media/site_images/event-managment/add_event_desktop.png)
+![add event mobile view](readme-media/site_images/event-managment/add_event_mobile.png)
+
+![update event desktop view](readme-media/site_images/event-managment/update_event_desktop.png)
+![update event mobile view](readme-media/site_images/event-managment/update_event_mobile.png)
+
+# Future Features
+
+### 1. Commenting on Events
+- Registered users will be able to comment on event posts, sharing their thoughts, experiences, and questions.
+
+### 2. Parrot Addition Requests
+- Users can request to add parrots to the parrot list. After admin approval, the parrot details will be shown on the site.
+
+### 3. User Parrot Details
+- Users can add details of their own parrots for record-keeping purposes, allowing them to track and manage information about their feathered friends.
+
+
+
 

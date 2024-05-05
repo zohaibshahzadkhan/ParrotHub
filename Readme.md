@@ -71,6 +71,9 @@ All user stories were entered as issues in a GitHub Kanban project follow the li
 - [3](https://github.com/zohaibshahzadkhan/ParrotHub/issues/3) - As a general user, I want to view event details and comment on events, so that I can engage with the community and express interest in attending.
 - [4](https://github.com/zohaibshahzadkhan/ParrotHub/issues/4) - As a Site User I can modify or delete my comment on a Event so that I can be involved in the conversation.
 
+## Design
+### ERD
+![ERD](readme-media/ERD.png)
 
 
 

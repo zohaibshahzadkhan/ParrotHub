@@ -165,3 +165,6 @@ All user stories were entered as issues in a GitHub Kanban project follow the li
 
 ***
 
+# Testing 
+
+A separate testing document has been created as [Testing.md](Testing.md)

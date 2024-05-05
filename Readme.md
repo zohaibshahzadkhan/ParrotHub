@@ -168,3 +168,101 @@ All user stories were entered as issues in a GitHub Kanban project follow the li
 # Testing 
 
 A separate testing document has been created as [Testing.md](Testing.md)
+
+### Known - Bug
+
+Event card layout is getting off when long text has been provided in location field. This is a known bug. However it can not be fixed due to time constraint.
+
+<img src="readme-media/error.png" alt="Add events page validation">
+
+#### Solution 
+
+Use CSS grid/flex-box system and restructure layout to move button vertically under location paragraph.
+
+***
+
+## Deployment
+### Cloning & Forking
+#### Fork
+1. On GitHub.com, navigate to the [zohaibshahzadkhan/ParrotHub](https://github.com/zohaibshahzadkhan/ParrotHub) repository.
+2. In the top-right corner of the page, click Fork.
+3. By default, forks are named the same as their parent repositories. You can change the name of the fork to distinguish it further.
+4. Add a description to your fork.
+5. Click Create fork.
+
+#### Clone
+1. Above the list of files click the button that says 'Code'.
+2. Copy the URL for the repository.
+3. Open Terminal. Change the directory to the location where you want the cloned directory.
+4. Type git clone, and then paste the URL
+5. Press Enter.
+
+### Local Deployment
+1. On GitHub.com, navigate to the [zohaibshahzadkhan/ParrotHub](https://github.com/zohaibshahzadkhan/ParrotHub) repository and clone it.
+2. Once you clone the repository you will need to install the libraries, you can do this by typing "pip3 install -r requirements.txt" into the terminal
+3. Open the .env file in the project directory and change the key pair values to match your credentials. There is a [sample env file](/sample_env.py) that you can use to help you
+
+### Remote Deployment 
+1. Log in to Heroku
+2. Click 'Create new app'.
+3. Give your application a unique name, select a region appropriate to your location and click the 'Create app' button.
+4. You can use an external database for example postgre or use 'Heroku Postgres' under the Add-ons section.
+5. Go to settings section and click 'Reveal Config Vars' in the Config vars section.
+6. Add ALLOWED_HOSTS and the value as the name of you project with '.herokuapp.com' appended to the end.
+7. Add CLOUDINARY_URL and the value as your cloudinary API key.
+8.  Add SECRET_KEY and the value as a complex string which will be used to provide cryptographic signing.
+9.  Add DATABASE_URL if you are using a different database than Heroku Postgres.
+10. Navigate to the 'Deploy' page
+11. Select 'GitHub' from the 'Deployment method' section
+12. Enter your github account details and select the forked/ clone repository.
+13. Select 'Manual deploy', select the 'main' branch in the drop down and click the 'Deploy' button.
+14. Once built, click the 'View' button to load the URL.
+
+### Database
+A Postgres database has been used for this project, provided by ElephantSQL.
+
+1. Open your web browser and go to the [ElephantSQL](https://www.elephantsql.com/) website.
+2. Sign up for a free account or log in if you already have an account.
+3. Once you have logged in, you will be taken to the Dashboard. From here, click on the "Create New Instance" button.
+4. You will now be taken to a page where you can configure your new database instance. Choose the "Tiny Turtle" plan which is free.
+5. Select the region where you want to host your database. The closest region to you is usually the best choice.
+6. Choose a name for your instance, this will be the name of your database.
+7. Choose a username and password for your instance.
+8. Click on the "Create" button to create your new database instance.
+1. The database url was stored in a config var: 'DATABASE_URL' on Heroku. This variable was then used in the settings.py to connect to the database.
+10. Click on the "Details" tab to view your instance details.
+11. Look for the "URI" field, which contains the connection details you need to connect to your database. The URI should start with: 'postgres://'
+
+The models were migrated to the database by entering the following commands in the terminal:
+
+python3 manage.py makemigrations
+python3 manage.py migrate
+
+ The live link can be found here - [Parrothub](https://parrot-hub-ea31d979dcf4.herokuapp.com/)
+
+### Prerequisite
+- A Cloudinary account will be needed, create one for free at https://cloudinary.com.
+
+
+***
+
+## Credits
+
+- There has been useful guidance from various articles from Stack Overflow - [Stack Overflow ](https://stackoverflow.com/)
+
+- HTML, CSS and Javascript code help was taken from w3schools - [W3Schools](https://www.w3schools.com/)
+
+- Django Documentation - [Django](https://docs.djangoproject.com/en/4.1/)
+
+- Bootstrap Documentation - [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+
+- Lucid Chart - This helped me to design my flow charts and class diagrams - [Lucid Chart](https://lucid.app/)
+
+- Figma - This helped me to design my wire-frames - [Figma](https://www.figma.com/)
+
+#### Media
+- Google Image - [google image](https://google.com/)
+  
+
+## Acknowledgements
+I want to express my immense gratitude to Code Institute for their Django course. Throughout this program, I've gained valuable knowledge that has been instrumental in developing this application.
